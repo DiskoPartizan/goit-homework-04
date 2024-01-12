@@ -8,6 +8,9 @@ header {
     flex-shrink: 0;
     border-bottom: 1px solid #e7e9fc;
     align-items: center;
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 1px 6px rgba(46, 47, 66, 0.08);
     }   
 header> .container {
     display: flex;
@@ -49,11 +52,24 @@ header> .container {
     padding: 24px 0;
     align-items: center;
     display: block;
+    position: relative;
+    color: #404bbf;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 .menunav{
     display: flex;
     gap: 40px;
+}
+.nav::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    height: 4px;
+    background-color: #404bbf;
+    border-radius: 2px;
+
 }
 .menunav .nav:hover, .menunav .nav:focus {
     color: #404bbf;
@@ -73,6 +89,7 @@ address {
     letter-spacing: 0.02em;
     color: #434455;
     display: block;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 .menuaddres .tel:hover,
@@ -85,11 +102,14 @@ address {
     gap: 40px;
 }
 .hero {
-    background-image: url(../images/people-officejpg.jpg);
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),url(../images/people-officejpg.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-color: #2e2f42;
     padding: 188px 0;
+    max-width: 1440px;
+    background-size: cover;
+
 }
 h1 {
     color: #ffffff;
@@ -120,6 +140,7 @@ h1 {
     border-radius: 4px;
     margin-left: auto;
     margin-right: auto;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .hero .button-order:hover, .hero .button-order:focus {
     background-color: #404BBF;
@@ -149,6 +170,16 @@ h1 {
 .list-item-strategy {
     flex-basis: calc((100% - 3*24px) / 4);
 }
+.icons-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 112px;
+    background-color: #f4f4fd;
+    border-radius: 4px;
+    margin-bottom: 8px;
+}
+
 .h-strategy {
     color: #2E2F42;
     font-size: 20px;
@@ -186,6 +217,9 @@ h1 {
     background-color: #FFFFFF;
     flex-basis: calc((100% - 3*24px) / 4);
     border-radius: 0px 0px 4px 4px;
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 .mark-div {
     padding: 32px 0;
@@ -212,6 +246,31 @@ h1 {
 .our-portfolio {
     padding-top: 120px;
     padding-bottom: 120px;
+}
+.soc-icon {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+}
+.soc-icon-title {
+    width: 40px;
+    height: 40px;
+}
+.soc-icon-link {
+    width: 100%;
+    height: 100%;
+    background-color: #4d5ae5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.soc-icon-link:hover :focus {
+    background-color: #404bbf;
+}
+.soc-icon-soc {
+    fill: #f4f4fd;
 }
 .portfolio {
     color: #2E2F42;
