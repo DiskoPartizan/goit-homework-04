@@ -85,6 +85,9 @@ address {
     gap: 40px;
 }
 .hero {
+    background-image: url(../images/people-officejpg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
     background-color: #2e2f42;
     padding: 188px 0;
 }
