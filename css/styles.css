@@ -145,7 +145,7 @@ h1 {
 .hero .button-order:hover {
     background-color: #404BBF;
 }
-.hero .button-order:focus {
+.button-order:focus {
     background-color: #404BBF;
 }
 .section-strategy {
